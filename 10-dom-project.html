@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <Style>
-        
+        .subscribe_button{
+            border: none;
+            border-radius: 30px;
+            background-color: red;
+            padding: 10px;
+            font-weight:  bold;
+            color: white;
+            cursor: pointer;
+        }
     </Style>
 </head>
 <body>
     <p>Youtube subscribe button</p>
-    <button onclick="Subscribe()" class="Sub_button">Subscribe</button>
+    <button onclick="Subscribe()" class="Sub_button subscribe_button">Subscribe</button>
 
     <p>Amazon shipping calculator</p>
     <input placeholder="Cost of order" class="js_cost_input" onkeydown="handleCostKeydown(event)">

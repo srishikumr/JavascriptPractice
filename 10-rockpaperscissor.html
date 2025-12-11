@@ -4,15 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock paper scissors</title>
+    <style>
+      body{
+        background-color: black;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .title{
+        font-weight: bold;
+        font-size: 30px;
+      }
+
+      .move-icon{
+        height: 50px;
+        
+      }
+
+      .move-button{
+        background-color: transparent;
+        border: 3px solid white;
+        width: 120px;
+        height: 120px;
+        border-radius: 70px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      .result{
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 50px;
+      }
+    </style>
 </head>
 <body>
-    <p>Rock, Paper and Scissor</p>
-    <button onclick=" playGame('Rock'); ">Rock</button>
-    <button onclick=" playGame('Paper'); ">Paper</button>
-    <button onclick=" playGame('Scissor');">Scissor</button>
+    <p class="title">Rock, Paper and Scissor</p>
+
+    <button onclick=" playGame('Rock'); " class="move-button"><img src="img/rock-emoji.png" class="move-icon"></button>
+
+    <button onclick=" playGame('Paper'); " class="move-button"><img src="img/paper-emoji.png" class="move-icon"></button>
+
+    <button onclick=" playGame('Scissor');" class="move-button"><img src="img/scissors-emoji.png" class="move-icon"></button>
 
 
-    <p class="js-result"></p>
+    <p class="js-result result"></p>
     <p class="js-moves"></p>
     <p class="js-score"></p>
 
@@ -26,6 +60,11 @@
             losses :0,
             ties:0
         };
+
+        function updateScoreDisplay() {
+      document.querySelector('.js-score').innerHTML =
+        `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+    }
         function removeScore(){
             score.wins=0;
             score.losses = 0;
@@ -34,6 +73,7 @@
             alert(`Score has been reseted.
 Wins: ${score.wins},
 Losses: ${score.losses}, Ties: ${score.ties}`);
+updateScoreDisplay();
         }
         
 
@@ -124,6 +164,7 @@ Losses: ${score.losses}, Ties: ${score.ties}`);
 
              alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
 Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+updateScoreDisplay();
         }
 
          
@@ -132,7 +173,7 @@ Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
       
      
       
-      document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Tie: ${score.ties}`;
+      updateScoreDisplay();
      
 
     </script>

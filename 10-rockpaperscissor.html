@@ -34,6 +34,18 @@
         font-weight: bold;
         margin-top: 50px;
       }
+
+      .score{
+        margin-top: 50px;
+      }
+
+      .reset-score-button{
+        background-color: white;
+        font-size: 20px;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
     </style>
 </head>
 <body>
@@ -47,10 +59,15 @@
 
 
     <p class="js-result result"></p>
-    <p class="js-moves"></p>
-    <p class="js-score"></p>
 
-    <button onclick=" removeScore(); ">Reset</button>
+    <p class="js-moves">You 
+    <img src = "img/rock-emoji.png" class="move-icon">
+    <img src="img/rock-emoji.png" class="move-icon">
+    </p>
+
+    <p class="js-score score" ></p>
+
+    <button onclick=" removeScore(); " class="reset-score-button">Reset</button>
 
     <script>
         let computerMove='';

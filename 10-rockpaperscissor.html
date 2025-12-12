@@ -55,15 +55,12 @@
 
     <button onclick=" playGame('Paper'); " class="move-button"><img src="img/paper-emoji.png" class="move-icon"></button>
 
-    <button onclick=" playGame('Scissor');" class="move-button"><img src="img/scissors-emoji.png" class="move-icon"></button>
+    <button onclick=" playGame('Scissor');" class="move-button"><img src="img/scissor-emoji.png" class="move-icon"></button>
 
 
     <p class="js-result result"></p>
 
-    <p class="js-moves">You 
-    <img src = "img/rock-emoji.png" class="move-icon">
-    <img src="img/rock-emoji.png" class="move-icon">
-    </p>
+    <p class="js-moves"></p>
 
     <p class="js-score score" ></p>
 
@@ -177,7 +174,9 @@ updateScoreDisplay();
             localStorage.setItem('score',JSON.stringify(score));
             document.querySelector('.js-result').innerHTML = result;
 
-            document.querySelector('.js-moves').innerHTML = `You ${playerMove} - computer ${computerMove}`;
+            document.querySelector('.js-moves').innerHTML = `You 
+    <img src = "img/${playerMove}-emoji.png" class="move-icon">
+    <img src="img/${computerMove}-emoji.png" class="move-icon">`;
 
              alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
 Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);

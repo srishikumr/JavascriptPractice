@@ -7,6 +7,10 @@ function addTodo(){
     //document.querySelector('.js-name-input').value = '';
 }
 
+function addTodoPrint(){
+    
+}
+
 function addTaskByEnter(event){
     
     const key = event.key;

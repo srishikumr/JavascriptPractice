@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min and Max number</title>
+    <style>
+        button{
+            display: block;
+            padding: 5px;
+            margin: 7px ;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 2px solid black;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .css-array{
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 2px solid black;
+            display: inline-block;
+            border-radius: 25px;
+            
+        }
+    </style>
+</head>
+<body>
+    <p class="array css-array"></p>
+    <button onclick="Maximum()">Calculate maximum</button>
+    <div class="max"></div>
+    <button onclick="Minimum()">Calculate minimum</button>
+    <div class="min"></div>
+
+    <script>
+        const array = [42,35,12,54,12,90];
+        document.querySelector('.array').innerHTML = array;
+        let max = 0;
+        let min = array[0];
+        function Maximum(){
+            
+            for (let i = 0; i<array.length; i++){
+                if (array[i]>max){
+                    max = array[i];
+                }
+                
+            }
+            document.querySelector('.max').innerHTML = max;
+            
+        }
+        function Minimum(){
+            for (let i = 0; i<array.length; i++){
+                if (array[i]<min){
+                    min = array[i];
+                }
+                
+                
+            }
+            document.querySelector('.min').innerHTML = min;
+        }
+    </script>
+
+</body>
+</html>

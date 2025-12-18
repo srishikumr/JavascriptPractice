@@ -11,14 +11,20 @@ function addTodo(){
     //document.querySelector('.js-name-input').value = '';
 }
 
-function addTodoPrint(){
+function renderTodoList(){
+    
     const name = document.querySelector('.js-name-input1').value;
     todolist.push(name);
     console.log(todolist);
     //document.querySelector('.js-name-input').value = '';
     for (let i = j; i<todolist.length; i++){
         const todo = todolist[i];
-        const html = `<p>${todo}</p>`
+        const html = `
+        <p>
+        ${todo} <button 
+        
+        >Delete</button>
+        </p>`
         todoListHTML += html;
         j++;
     }

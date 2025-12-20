@@ -89,3 +89,26 @@ function addTaskByEnter(event){
 //     console.log('safe');
 //    }
 }
+
+function addTaskByEnter1(event){
+    
+    const key = event.key;
+    if (key == 'Enter'){
+        addTodo1();
+    
+    }
+//    else{
+//     console.log('safe');
+//    }
+}
+function addTaskByEnter2(event){
+    
+    const key = event.key;
+    if (key == 'Enter'){
+        addTodo2();
+    
+    }
+//    else{
+//     console.log('safe');
+//    }
+}

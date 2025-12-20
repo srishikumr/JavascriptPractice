@@ -75,7 +75,7 @@ function deleteTodo(i){
 function deleteTodo1(i){
     
         todoListObject.splice(i, 1);
-        renderTodoList();
+        renderTodoList1();
 }
 
 function addTaskByEnter(event){

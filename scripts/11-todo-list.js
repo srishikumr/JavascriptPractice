@@ -57,7 +57,7 @@ function renderTodoList1(){
         const html = `
        <div>${name}</div>
        <div>${dueDate}</div>
-       <button onclick= "deleteTodo1(${i});"
+       <button onclick= "deleteTodo1(${i});" class = "delete-todo-button"
         >Delete</button>
        `
         todoListHTML += html;

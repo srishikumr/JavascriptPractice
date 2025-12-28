@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+    <div class="js-loop"></div>
+
+
+    <script>
+        let numsDouble = [];
+        for(let i = 0; i <= 20; i++){
+            if (i%3===0){
+                numsDouble.push('Fizz')
+            }
+            else if(i%5===0){
+                numsDouble.push('Buzz')
+            }
+            else if(i%3===0 && i%3===0){
+                numsDouble.push('FizzBuzz')
+            }
+            else{
+                numsDouble.push(i);
+            }
+            
+            
+        }
+        
+        document.querySelector('.js-loop').innerHTML = numsDouble;
+    </script>
+</body>
+</html>

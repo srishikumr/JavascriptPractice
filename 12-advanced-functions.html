@@ -31,12 +31,22 @@
 
         const object1 = {
             num: 2,
-            fun: function greetings(){
+            fun: function /*greetings*/ (){
                 console.log("Hello3")
             }
         };
 
         object1.fun();
+
+        function display(param){
+            console.log(param);
+        }
+        display(43);
+
+        function run (param){     //passing a function into another function
+            param();
+        }
+        run(function(){console.log('Hello4'); }); //the function we are passing is called a callback function
     </script>
 </body>
 </html>

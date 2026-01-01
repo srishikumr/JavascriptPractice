@@ -109,16 +109,18 @@ updateScoreDisplay();
     <img src = "img/${playerMove}-emoji.png" class="move-icon">
     <img src="img/${computerMove}-emoji.png" class="move-icon">`;
 
-             alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
-Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+             /*alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
+Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);*/
 updateScoreDisplay();
         }
 
          
+    updateScoreDisplay();
 
-        
-      
-     
-      
-      updateScoreDisplay();
+    function autoPlay(){
+      setInfterval(function(){
+        const playerMove = pickcomputerMove();
+        playGame(playerMove);
+      }, 3000);
+    }
      

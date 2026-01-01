@@ -117,10 +117,24 @@ updateScoreDisplay();
          
     updateScoreDisplay();
 
+        let isAutoPlaying = false;
+
+        let intervalId;
+
     function autoPlay(){
-      setInfterval(function(){
+      if(!isAutoPlaying){
+        intervalId = setInterval(function(){
         const playerMove = pickcomputerMove();
         playGame(playerMove);
-      }, 3000);
+      }, 1000);
+      isAutoPlaying = true;
+      }
+      
+      else{
+        clearInterval(intervalId);
+        isAutoPlaying = false;
+      }
     }
+
+
      

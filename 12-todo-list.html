@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel = "stylesheet" href="style/12-todo-list.css">
+</head>
+<body>
+   <h1>To-Do List</h1>
+   <input placeholder="Task" class="js-name-input" onkeydown="addTaskByEnter(event);">
+   <button onclick="addTodo();">Add</button>
+   <script src="scripts/12-todo-list.js"></script>
+
+   <h2>To-Do List</h2>
+   <input placeholder="Enter Task" class="js-name-input1" onkeydown="addTaskByEnter1(event)">
+   <button onclick="addTodo1();">Add</button> 
+   <div class="todoListPrinter"></div>
+
+   <h3>To-Do List</h3>
+   <div class = "todo-input-grid">
+        <input placeholder="Enter Task" class = " js-name-input2 name-input" onkeydown="addTaskByEnter2(event)">
+        <input type="date" class="js-date-input date-input">
+        <button onclick="addTodo2();" class="add-todo-button">Add</button>
+   </div>
+   <div class="todoListPrinter1 todo-grid"></div>
+</body>
+</html>

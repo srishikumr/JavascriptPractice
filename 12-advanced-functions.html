@@ -70,6 +70,9 @@
             'watch youutbe',
             'study mf'
         ].forEach(function(value, index){       //another way to traverse the array
+            if (value === 'wash dishes'){
+                return;
+            }
             console.log(index);
             console.log(value);
         })

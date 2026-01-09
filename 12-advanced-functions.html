@@ -79,7 +79,7 @@
 
 
 
-        const regularFunction = function () {
+        const regularFunction = function (param, param2) {
             console.log("hello");
         }
 
@@ -87,12 +87,21 @@
 
         //but arrowfunctions have few short cuts
 
-        
-        const arrowFunction = () => {
+
+        const arrowFunction = (param, param2) => {
             console.log("hello");
         }
 
         arrowFunction();
+
+        const arrowfunctionsShort = param => {
+            console.log (param +2);
+        }
+        arrowfunctionsShort(4);
+
+        const arrowfucntionShort2 =  () => 3+4;
+
+        console.log(arrowfucntionShort2());
     </script>
 </body>
 </html>

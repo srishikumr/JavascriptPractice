@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced features</title>
+    <div class="methodT"></div>
 </head>
 <body>
     <script>
@@ -105,7 +106,8 @@
 
         const object ={
             method(){
-                console.log('this is how you do it!')
+                const Sent = "This is how you do it!";
+                document.querySelector('.methodT').innerHTML = Sent;
             }
         }
 

@@ -123,7 +123,7 @@ updateScoreDisplay();
 
     function autoPlay(){
       if(!isAutoPlaying){
-        intervalId = setInterval(function(){
+        intervalId = setInterval(() => {
         const playerMove = pickcomputerMove();
         playGame(playerMove);
       }, 1000);

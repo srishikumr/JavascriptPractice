@@ -42,16 +42,16 @@ function renderTodoList(){
         
    })
     //document.querySelector('.js-name-input').value = '';
-    for (let i = 0; i<todolist.length; i++){
-        const todo = todolist[i];
-        const html = `
-        <p>
-        ${todo} <button onclick= "deleteTodo(${i});"
-        >Delete</button>
-        </p>`
-        todoListHTML += html;
+    // for (let i = 0; i<todolist.length; i++){
+    //     const todo = todolist[i];
+    //     const html = `
+    //     <p>
+    //     ${todo} <button onclick= "deleteTodo(${i});"
+    //     >Delete</button>
+    //     </p>`
+    //     todoListHTML += html;
         
-    }
+    // }
     console.log(todoListHTML);
     document.querySelector('.todoListPrinter').innerHTML = todoListHTML;
 }

@@ -8,13 +8,17 @@
 </head>
 <body>
 
-    <button onclick="" class="js-button">Click</button>
+    <button  class="js-button">Click</button>
     <script>
 
         const buttonElement  = document.querySelector('.js-button');
 
         buttonElement.addEventListener('click', () => {
-            console.log('hello');
+            console.log('hello');          //there can be more than one eventLister 
+        });
+
+        buttonElement.addEventListener('click', () => {
+            console.log('hello2');        
         });
 
         /*

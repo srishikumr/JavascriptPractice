@@ -13,9 +13,13 @@
 
         const buttonElement  = document.querySelector('.js-button');
 
-        buttonElement.addEventListener('click', () => {
+        const eventLister =  () => {
             console.log('hello');          //there can be more than one eventLister 
-        });
+        };
+        
+        buttonElement.addEventListener('click', eventLister);
+ 
+        buttonElement.removeEventListener('click',eventLister );
 
         buttonElement.addEventListener('click', () => {
             console.log('hello2');        

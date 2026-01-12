@@ -57,6 +57,9 @@ updateScoreDisplay();
         
         }
 
+        document.querySelector('.js-rock-button').addEventListener('click', ()=>{ playGame('Rock')});
+
+
         function playGame(playerMove){
             const computerMove = pickcomputerMove();
             if (playerMove==='Scissor'){
@@ -111,6 +114,8 @@ updateScoreDisplay();
 
              /*alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
 Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);*/
+
+
 updateScoreDisplay();
         }
 

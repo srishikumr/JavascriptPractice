@@ -7,7 +7,16 @@
     <div class="methodT"></div>
 </head>
 <body>
+
+    <button onclick="" class="js-button">Click</button>
     <script>
+
+        const buttonElement  = document.querySelector('.js-button');
+
+        buttonElement.addEventListener('click', () => {
+            console.log('hello');
+        });
+
         /*
         function greetings(){
             console.log("Hello");
@@ -88,7 +97,7 @@
 
         //but arrowfunctions have few short cuts
 
-
+/*
         const arrowFunction = (param, param2) => {
             console.log("hello");
         }
@@ -111,7 +120,9 @@
             }
         }
 
-        object.method();
+        object.method(); */
+
+        
     </script>
 </body>
 </html>

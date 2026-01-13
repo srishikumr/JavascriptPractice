@@ -61,6 +61,8 @@ updateScoreDisplay();
 
         document.querySelector('.js-paper-button').addEventListener('click', ()=>{ playGame('Paper')});
 
+        document.querySelector('.js-scissor-button').addEventListener('click', ()=>{ playGame('Scissor')});
+
         function playGame(playerMove){
             const computerMove = pickcomputerMove();
             if (playerMove==='Scissor'){

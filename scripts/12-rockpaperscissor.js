@@ -63,6 +63,18 @@ updateScoreDisplay();
 
         document.querySelector('.js-scissor-button').addEventListener('click', ()=>{ playGame('Scissor')});
 
+        document.body.addEventListener('keydown', (event) => {
+          if(event.key === 'r'){
+            playGame('Rock');
+          }
+          else if(event.key === 'p'){
+            playGame('Paper');
+          }
+          else if (event.key === 's'){
+            playGame('Scissor');
+          }
+        })
+
         function playGame(playerMove){
             const computerMove = pickcomputerMove();
             if (playerMove==='Scissor'){

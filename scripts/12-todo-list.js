@@ -77,7 +77,7 @@ function renderTodoList1(){
         const html = `
        <div>${name}</div>
        <div>${dueDate}</div>
-       <button onclick= "deleteTodo1(${i});" class = "delete-todo-button"
+       <button onclick= "deleteTodo1(${i});" class = "delete-todo-button js-delete-button"
         >Delete</button>
        `
         todoListHTML += html;
@@ -86,6 +86,13 @@ function renderTodoList1(){
     console.log(todoListHTML);
     document.querySelector('.todoListPrinter1').innerHTML = todoListHTML;
 }
+
+document.querySelectorAll('js-delete-button')
+    .forEach((deleteButton, index)=>{
+        deleteButton.addEventListener('click', ()=>{
+            deleteTodo1();
+        })
+    })
 
 function deleteTodo(i){
     

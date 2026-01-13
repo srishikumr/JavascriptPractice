@@ -18,6 +18,16 @@ function addTodo1(){
     renderTodoList();
 }
 
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   document.querySelector('.js-add-button')
+//     .addEventListener('click', addTodo2);
+// });
+
+document.querySelector('.js-add-button')
+.addEventListener('click',addTodo2)
+
 function addTodo2(){
     
     const name = document.querySelector('.js-name-input2').value;

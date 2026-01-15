@@ -11,6 +11,7 @@ let computerMove='';
         `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
     }
         function removeScore(){
+          if (confirm('Please confirm your actions') === true){
             score.wins=0;
             score.losses = 0;
             score.ties=0;
@@ -19,6 +20,10 @@ let computerMove='';
 Wins: ${score.wins},
 Losses: ${score.losses}, Ties: ${score.ties}`);
 updateScoreDisplay();
+          }
+else{
+  alert('Reset has been cancelled');
+}            
         }
         
 
@@ -72,6 +77,9 @@ updateScoreDisplay();
           }
           else if (event.key === 's'){
             playGame('Scissor');
+          }
+          else if(event.key === 'a'){
+            autoPlay();
           }
         })
 

@@ -11,19 +11,22 @@ let computerMove='';
         `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
     }
         function removeScore(){
-          if (confirm('Please confirm your actions') === true){
+          document.querySelector('.confirm-reset')
+    .classList.remove('hidden');
+
+    document.querySelector('.js-confirm-yes').addEventListener('click', ()=>{
+      
+    })
             score.wins=0;
             score.losses = 0;
             score.ties=0;
             localStorage.removeItem('score');
             alert(`Score has been reseted.
-Wins: ${score.wins},
-Losses: ${score.losses}, Ties: ${score.ties}`);
-updateScoreDisplay();
-          }
-else{
-  alert('Reset has been cancelled');
-}            
+            Wins: ${score.wins},
+            Losses: ${score.losses}, Ties: ${score.ties}`);
+            updateScoreDisplay();
+          
+        
         }
         
 

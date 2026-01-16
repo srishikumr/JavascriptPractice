@@ -13,11 +13,10 @@ let computerMove='';
         function removeScore(){
           document.querySelector('.confirm-reset')
     .classList.remove('hidden');
+}
 
-    document.querySelector('.js-confirm-yes').addEventListener('click', ()=>{
-      
-    })
-            score.wins=0;
+  document.querySelector('.js-confirm-yes').addEventListener('click', ()=>{
+         score.wins=0;
             score.losses = 0;
             score.ties=0;
             localStorage.removeItem('score');
@@ -25,9 +24,15 @@ let computerMove='';
             Wins: ${score.wins},
             Losses: ${score.losses}, Ties: ${score.ties}`);
             updateScoreDisplay();
-          
-        
-        }
+
+            document.querySelector('.confirm-reset')
+      .classList.add('hidden');
+    })
+
+    document.querySelector('.js-confirm-no').addEventListener('click', ()=>{
+      document.querySelector('.confirm-reset')
+      .classList.add('hidden');
+    })
         
 
 

@@ -27,3 +27,8 @@ const products = [{
     }, 
     priceCents: 6969
 }]
+
+products.forEach((product)=>{
+
+    
+})

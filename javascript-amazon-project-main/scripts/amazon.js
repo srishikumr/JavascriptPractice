@@ -32,7 +32,7 @@ products.forEach((product)=>{
     const html = `<div class="product-container">
           <div class="product-image-container">
             <img class="product-image"
-              src="images/products/athletic-cotton-socks-6-pairs.jpg">
+              src="${product.image}">
           </div>
 
           <div class="product-name limit-text-to-2-lines">
@@ -79,4 +79,6 @@ products.forEach((product)=>{
         </div>`
 
         console.log(html);
+
+        document.querySelector('.js-test').innerHTML = html
 })

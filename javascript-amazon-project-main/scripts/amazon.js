@@ -78,7 +78,6 @@ products.forEach((product)=>{
           </button>
         </div>`
 
-        console.log(html);
-
+console.log("The internet is shit here")
         document.querySelector('.js-test').innerHTML = html
 })

@@ -28,8 +28,11 @@ const products = [{
     priceCents: 6969
 }]
 
+let productsHTML = '';
+
+
 products.forEach((product)=>{
-    const html = `<div class="product-container">
+    productsHTML += `<div class="product-container">
           <div class="product-image-container">
             <img class="product-image"
               src="${product.image}">
@@ -78,6 +81,6 @@ products.forEach((product)=>{
           </button>
         </div>`
 
-console.log("The internet is shit here")
-        document.querySelector('.js-test').innerHTML = html
+        console.log("The internet is shit here")
+        document.querySelector('.js-test').innerHTML = productsHTML;
 })

@@ -62,6 +62,6 @@ products.forEach((product)=>{
 
         document.querySelectorAll('.js-add-to-cart').forEach((button) => {
           button.addEventListener('click',()=>{
-            console.log("hello, just making sure its working add to cart is connected!");
+            console.log(button.dataset.productName); //data-product-name (kebab case) changed to camel case
           });
         });

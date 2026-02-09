@@ -62,6 +62,14 @@ products.forEach((product)=>{
 
         document.querySelectorAll('.js-add-to-cart').forEach((button) => {
           button.addEventListener('click',()=>{
-            console.log(button.dataset.productName); //data-product-name (kebab case) changed to camel case
+            //console.log(button.dataset.productName); //data-product-name (kebab case) changed to camel case
+
+            const productName = button.dataset.productName;
+            cart.push({
+              productName, //instead of productName: productName
+              quantity: 1
+            });
+            console.log(cart);
+
           });
         });

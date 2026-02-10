@@ -73,3 +73,6 @@ products.forEach((product)=>{
 
           });
         });
+
+
+        console.log("Checking");

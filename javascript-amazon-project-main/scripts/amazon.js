@@ -65,10 +65,25 @@ products.forEach((product)=>{
             //console.log(button.dataset.productName); //data-product-name (kebab case) changed to camel case
 
             const productName = button.dataset.productName;
-            cart.push({
-              productName, //instead of productName: productName
+
+            let matchItem; 
+
+            cart.forEach((item)=>{
+              if(productName === item.productName){
+                matchItem = item;
+              }
+            });
+
+            if(matchItem){
+              matchItem.quantity += 1;
+            }
+
+            else{
+              cart.push({
+              productName : productName, //instead of productName: productName
               quantity: 1
             });
+            }
             console.log(cart);
 
           });

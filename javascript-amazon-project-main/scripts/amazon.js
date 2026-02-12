@@ -64,12 +64,12 @@ products.forEach((product)=>{
           button.addEventListener('click',()=>{
             //console.log(button.dataset.productName); //data-product-name (kebab case) changed to camel case
 
-            const productName = button.dataset.productName;
+            const productId = button.dataset.productId;
 
             let matchItem; 
 
             cart.forEach((item)=>{
-              if(productName === item.productName){
+              if(productId === item.productId){
                 matchItem = item;
               }
             });
@@ -80,7 +80,7 @@ products.forEach((product)=>{
 
             else{
               cart.push({
-              productName : productName, //instead of productName: productName
+              productId : productId, //instead of productName: productName
               quantity: 1
             });
             }
@@ -90,4 +90,3 @@ products.forEach((product)=>{
         });
 
 
-        console.log("Checking");

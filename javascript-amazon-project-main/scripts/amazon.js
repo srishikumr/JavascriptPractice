@@ -84,6 +84,14 @@ products.forEach((product)=>{
               quantity: 1
             });
             }
+
+            let cartQuantity = 0; 
+            cart.forEach((item)=>{
+              cartQuantity+= item.quantity  ;
+            });
+
+            console.log(cartQuantity);
+
             console.log(cart);
 
           });

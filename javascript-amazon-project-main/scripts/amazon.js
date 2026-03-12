@@ -61,13 +61,8 @@ products.forEach((product)=>{
 
         document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
-        document.querySelectorAll('.js-add-to-cart').forEach((button) => {
-          button.addEventListener('click',()=>{
-            //console.log(button.dataset.productName); //data-product-name (kebab case) changed to camel case
-
-            const productId = button.dataset.productId;
-
-            let matchItem; 
+        function addToCart(){
+          let matchItem; 
 
             cart.forEach((item)=>{
               if(productId === item.productId){
@@ -85,6 +80,15 @@ products.forEach((product)=>{
               quantity: 1
             });
             }
+        }
+
+        document.querySelectorAll('.js-add-to-cart').forEach((button) => {
+          button.addEventListener('click',()=>{
+            //console.log(button.dataset.productName); //data-product-name (kebab case) changed to camel case
+
+            const productId = button.dataset.productId;
+
+            addToCart();
 
             let cartQuantity = 0; 
             cart.forEach((item)=>{

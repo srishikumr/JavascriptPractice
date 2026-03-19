@@ -1,1 +1,22 @@
 export const cart = [];
+
+ function addToCart(productId){
+          let matchItem; 
+
+            cart.forEach((cartItem)=>{
+              if(productId === cartItem.productId){
+                matchItem = cartItem;
+              }
+            });
+
+            if(matchItem){
+              matchItem.quantity += 1;
+            }
+
+            else{
+              cart.push({
+              productId : productId, //instead of productName: productName
+              quantity: 1
+            });
+            }
+        }
